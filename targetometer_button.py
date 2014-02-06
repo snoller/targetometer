@@ -5,14 +5,14 @@ import os
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 lcd = Adafruit_CharLCDPlate()
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
-GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(15, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 try:
  while True:
-  GPIO.wait_for_edge(25, GPIO.FALLING)
+  GPIO.wait_for_edge(15, GPIO.FALLING)
   os.system("python /home/pi/targetometer/targetometer_button_once.py")
 
 except KeyboardInterrupt:

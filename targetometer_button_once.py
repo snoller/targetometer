@@ -7,22 +7,22 @@ import os
 
 lcd = Adafruit_CharLCDPlate()
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(8, GPIO.OUT)
-GPIO.setup(9, GPIO.OUT)
-GPIO.setup(10, GPIO.OUT)
-GPIO.setup(4, GPIO.OUT)
-GPIO.setup(11, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
+GPIO.setup(18, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(24, GPIO.OUT)
+GPIO.setup(26, GPIO.OUT)
 
 
-GPIO.output(4, False)
-GPIO.output(8, False)
-GPIO.output(9, False)
-GPIO.output(10, False)
-GPIO.output(11, False)
+GPIO.output(16, False)
+GPIO.output(18, False)
+GPIO.output(22, False)
+GPIO.output(24, False)
+GPIO.output(26, False)
 sleep(1)
-GPIO.output(11, True)
+GPIO.output(18, True)
 
 lcd.clear()
 lcd.message("Updating.")

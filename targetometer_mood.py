@@ -3,10 +3,10 @@
 from time import sleep
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(24, GPIO.OUT)
-GPIO.setup(23, GPIO.OUT)
+GPIO.setup(11, GPIO.OUT)
+GPIO.setup(13, GPIO.OUT)
 
 red = True
 green = True
@@ -28,13 +28,13 @@ while True:
  #print(settings)
  blink = 0
  while blink < 20:
-  GPIO.output(24, False)
-  GPIO.output(23, False)
+  GPIO.output(11, False)
+  GPIO.output(13, False)
   sleep(pulse)
   if green == "on":
-   GPIO.output(24, True)
+   GPIO.output(11, True)
   if red == "on":
-   GPIO.output(23, True)
+   GPIO.output(13, True)
   sleep(pulse)
   blink = blink + 1
 
