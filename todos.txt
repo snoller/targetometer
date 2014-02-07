@@ -1,6 +1,10 @@
 HARDWARE
 - Kontrast-Regler hinten anlöten
+- Normal-LED für mood reich
+- Gehäuse minimal breiter
 
 SOFTWARE
-- git sync in crontab
-- json input von nugg.ad api lesen
+- last update anzeigen
+- richtigen json endpoint ansteuern
+- personalisieren
+- exception handling prüfen
