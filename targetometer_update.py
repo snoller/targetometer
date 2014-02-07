@@ -10,16 +10,17 @@ lcd = Adafruit_CharLCDPlate()
 lcd.backlight(lcd.ON)
 
 #check if i am already running
-f = open('/home/pi/targetometer/lock.txt', 'r')
-lockstate = f.read()
-f.close()
-print "Lockstate:" + lockstate
-if lockstate == "1":
- sys.exit()
-else:
- f2 = open('/home/pi/targetometer/lock.txt', 'w')
- f2.write("1")
-f2.close()
+#f = open('/home/pi/targetometer/lock.txt', 'r')
+#lockstate = f.read()
+#f.close()
+#print "Lockstate:" + lockstate
+#if lockstate == "1":
+# sys.exit()
+#else:
+# f2 = open('/home/pi/targetometer/lock.txt', 'w')
+# f2.write("1")
+#f2.close()
+
 
 #print lockstate
 
@@ -114,6 +115,7 @@ while (loop < 2):
 f = open('/home/pi/targetometer/lock.txt', 'w')
 f.write("0")
 f.close()
+
 lcd.backlight(lcd.OFF)
 
 GPIO.cleanup()
