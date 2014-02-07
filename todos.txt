@@ -3,3 +3,4 @@ HARDWARE
 
 SOFTWARE
 - git sync in crontab
+- json input von nugg.ad api lesen
