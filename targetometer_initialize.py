@@ -76,6 +76,10 @@ sleep(0.5)
 
 lcd.message("fetching data...")
 sleep(3)
-os.system("python /home/pi/targetometer/targetometer_button_once.py")
+
+lcd.backlight(lcd.OFF)
+lcd.clear()
+
+# os.system("python /home/pi/targetometer/targetometer_button_once.py")
 
 GPIO.cleanup()
