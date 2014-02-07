@@ -5,9 +5,12 @@ from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 import RPi.GPIO as GPIO
 import os
 import sys
+from jsonreader2 import impressions
 
 lcd = Adafruit_CharLCDPlate()
 lcd.backlight(lcd.ON)
+
+print impressions
 
 #check if i am already running
 #f = open('/home/pi/targetometer/lock.txt', 'r')
@@ -101,6 +104,9 @@ while (loop < 2):
  sleep(3)
  lcd.clear()
  lcd.message("brand uplift:\n+23%")
+ sleep(3)
+ lcd.clear()
+ lcd.message("Impressions API\n" + str(impressions))
  sleep(3)
  lcd.clear()
  lcd.message("Enjoy your\n weekend")
