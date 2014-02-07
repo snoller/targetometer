@@ -107,7 +107,7 @@ while (loop < 2):
  sleep(3)
  lcd.clear()
  sleep(0.2)
- lcd.message("you little\n sucker")
+ lcd.message("my\n friend")
  sleep(0.7)
  lcd.clear()
  loop = loop + 1
