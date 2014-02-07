@@ -1,0 +1,5 @@
+HARDWARE
+- Kontrast-Regler hinten anlöten
+
+SOFTWARE
+- git sync in crontab
