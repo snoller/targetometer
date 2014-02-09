@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from time import sleep
+from time import sleep, strftime, localtime
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 import RPi.GPIO as GPIO
 import os
@@ -71,6 +71,9 @@ while (loop < 2):
  lcd.backlight(lcd.RED)
  lcd.clear()
  lcd.message("nugg.ad \ntargetometer")
+ sleep(3)
+ lcd.clear()
+ lcd.message(strftime("%a, %d %b %Y \n %H:%M:%S", localtime()))
  sleep(3)
  lcd.clear()
 
