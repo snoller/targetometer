@@ -8,3 +8,17 @@ SOFTWARE
 - richtigen json endpoint ansteuern
 - personalisieren
 - exception handling prüfen
+
+Sonstiges
+- Umzug auf nugg.ad github
+
+LIEFERUMFANG
+- weiches LAN-Kabel
+- Langes Netzteil mit weichem Kabel
+- Anleitungsposter
+
+BAUTEILE
+- Raspberry 512
+- GPIO Header extra large
+- Kabelbaum female-male
+- Mood-LED aus zwei einfachen LEDs
