@@ -10,22 +10,6 @@ from jsonreader2 import impressions
 lcd = Adafruit_CharLCDPlate()
 lcd.backlight(lcd.ON)
 
-print impressions
-
-#check if i am already running
-#f = open('/home/pi/targetometer/lock.txt', 'r')
-#lockstate = f.read()
-#f.close()
-#print "Lockstate:" + lockstate
-#if lockstate == "1":
-# sys.exit()
-#else:
-# f2 = open('/home/pi/targetometer/lock.txt', 'w')
-# f2.write("1")
-#f2.close()
-
-
-#print lockstate
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
@@ -66,9 +50,9 @@ while (blink < 10):
  blink = blink +1
 
 # Clear display and show some status messages
-loop=0;
-while (loop < 2):
- lcd.backlight(lcd.RED)
+#loop=0;
+while (1==1):
+ lcd.backlight(lcd.GREEN)
  lcd.clear()
  lcd.message("nugg.ad \ntargetometer")
  sleep(3)
@@ -119,11 +103,19 @@ while (loop < 2):
  lcd.message("my\n friend")
  sleep(0.7)
  lcd.clear()
- loop = loop + 1
+ #loop = loop + 1
+ 
+ GPIO.output(16, False)
+ GPIO.output(18, False)
+ GPIO.output(22, False)
+ GPIO.output(24, False)
+ GPIO.output(26, False)
 
-f = open('/home/pi/targetometer/lock.txt', 'w')
-f.write("0")
-f.close()
+ t = 0
+ while(t < 60):
+  lcd.message(strftime("%a, %d %b %Y \n %H:%M:%S        ", localtime()))
+  sleep(1)
+  t = t+1
 
 lcd.backlight(lcd.OFF)
 
