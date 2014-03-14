@@ -27,32 +27,32 @@ GPIO.output(24, False)
 GPIO.output(26, False)
 sleep(1)
 
-#turn them on
-GPIO.output(18, True)
-sleep(0.05)
-GPIO.output(18, False)
-sleep(0.08)
-GPIO.output(18, True)
-sleep(1.5)
-GPIO.output(26, True)
-sleep(0.5)
-GPIO.output(22, True)
-sleep(0.7)
-GPIO.output(24, True)
-sleep(0.3)
+while(1==1):
+ #turn them on
+ GPIO.output(18, True)
+ sleep(0.05)
+ GPIO.output(18, False)
+ sleep(0.08)
+ GPIO.output(18, True)
+ sleep(1.5)
+ GPIO.output(26, True)
+ sleep(0.5)
+ GPIO.output(22, True)
+ sleep(0.7)
+ GPIO.output(24, True)
+ sleep(0.3)
 
-blink = 0
-while (blink < 10):
- GPIO.output(16, True)
- sleep(0.06)
- GPIO.output(16, False)
- sleep(0.06)
- blink = blink +1
+ blink = 0
+ while (blink < 10):
+  GPIO.output(16, True)
+  sleep(0.06)
+  GPIO.output(16, False)
+  sleep(0.06)
+  blink = blink +1
 
-# Clear display and show some status messages
-#loop=0;
-while (1==1):
- lcd.backlight(lcd.GREEN)
+ # Clear display and show some status messages
+ #loop=0;
+ lcd.backlight(lcd.RED)
  lcd.clear()
  lcd.message("nugg.ad \ntargetometer")
  sleep(3)
