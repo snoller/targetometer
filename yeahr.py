@@ -13,7 +13,7 @@ lcd = Adafruit_CharLCDPlate()
 lcd.backlight(lcd.RED)
 i = 0
 
-while(i<20):
+while(True):
  lcd.message("nugg.ad \nYeah Receiver")
  sleep(10)
  lcd.clear()
@@ -28,6 +28,12 @@ while(i<20):
  #sleep(10)
  #lcd.clear()
  i = i+1
+ t = 0
+ while(t < 60):
+  lcd.message(strftime("%a, %d %b %Y \n %H:%M:%S        ", localtime()))
+  sleep(1)
+  t = t+1
+
 lcd.backlight(lcd.OFF)
 lcd.clear()
  
