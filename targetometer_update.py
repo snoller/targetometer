@@ -5,7 +5,7 @@ from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 import RPi.GPIO as GPIO
 import os
 import sys
-from jsonreader2 import impressions
+from jsonreader2 import flat
 
 lcd = Adafruit_CharLCDPlate()
 lcd.backlight(lcd.ON)
@@ -78,24 +78,12 @@ while(1==1):
  except:
   pass
 
- lcd.message("Predictions:\n23785 (+3%)")
- sleep(3)
- lcd.clear()
- lcd.message("Programmatic:\n12300 (+11%)")
- sleep(3)
- lcd.clear()
- lcd.message("Campaigns:\n23")
- sleep(3)
- lcd.clear()
- lcd.message("best var:\nSUV")
- sleep(3)
- lcd.clear()
- lcd.message("brand uplift:\n+23%")
- sleep(3)
- lcd.clear()
- lcd.message("Impressions API\n" + str(impressions))
- sleep(3)
- lcd.clear()
+#display some kpis from the list
+ for index  in flat:
+  lcd.message(index[0] + "\n" + str(index[1]))
+  sleep(3)
+  lcd.clear()
+
  lcd.message("Enjoy your\n weekend")
  sleep(3)
  lcd.clear()
